@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "a1cea41d-6fe0-4cc3-934c-6a3a3f9ea437",
+		"name": "PersonService_Postman Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All persons(No Cache)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9081/person/getPersons",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"person",
+						"getPersons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"personId\": 2,\n        \"firstName\": \"Harsha\",\n        \"lastName\": \"Mendu\",\n        \"subscriptionType\":\"Yearly\",\n        \"age\": \"52\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9081/person/addPersons",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"person",
+						"addPersons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete person by person Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9081/person/3",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"person",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get person by personid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9081/person/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"person",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear cache",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9081/person/evict",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"person",
+						"evict"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
